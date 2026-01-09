@@ -1,0 +1,6 @@
+{
+  "FFO_TO_DEBT_LT": 0.15,
+  "DEBT_TO_CAPITAL_GT": 0.55,
+  "DEBT_TO_EBITDA_GT": 4.5,
+  "NEG_EQUITY_SEQ_LE": 0.0
+}

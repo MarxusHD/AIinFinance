@@ -1,0 +1,37 @@
+{
+  "DATA_PATH": "data.csv",
+  "VARIABLES_XLSX_PATH": "Variables.xlsx",
+  "TRAIN_CUTOFF_LABEL_YEAR": 2022,
+  "VAL_YEARS": 1,
+  "KNN_K": 25,
+  "IMPUTE_LO_Q": 0.01,
+  "IMPUTE_HI_Q": 0.99,
+  "WINSOR_LO_Q": 0.01,
+  "WINSOR_HI_Q": 0.99,
+  "LOGIT_C_GRID": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "XGB_PARAMS": {
+    "max_depth": 4,
+    "min_child_weight": 5,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "eta": 0.05,
+    "reg_lambda": 10.0,
+    "reg_alpha": 0.0,
+    "objective": "binary:logistic",
+    "eval_metric": "aucpr",
+    "tree_method": "hist",
+    "seed": 42
+  },
+  "XGB_NUM_BOOST_ROUND": 5000,
+  "XGB_EARLY_STOPPING": 100,
+  "COST_FN": 10.0,
+  "COST_FP": 1.0,
+  "CAPACITY_PCT": 0.2,
+  "OUTPUT_DIR": "outputs",
+  "FIG_DIR": "figures"
+}
