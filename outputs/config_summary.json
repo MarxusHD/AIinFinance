@@ -3,7 +3,7 @@
   "VARIABLES_XLSX_PATH": "Variables.xlsx",
   "TRAIN_CUTOFF_LABEL_YEAR": 2022,
   "VAL_YEARS": 1,
-  "KNN_K": 25,
+  "KNN_K": 5,
   "IMPUTE_LO_Q": 0.01,
   "IMPUTE_HI_Q": 0.99,
   "WINSOR_LO_Q": 0.01,
@@ -28,7 +28,7 @@
     "seed": 42
   },
   "XGB_NUM_BOOST_ROUND": 5000,
-  "XGB_EARLY_STOPPING": 100,
+  "XGB_EARLY_STOPPING": 200,
   "COST_FN": 10.0,
   "COST_FP": 1.0,
   "CAPACITY_PCT": 0.2,
