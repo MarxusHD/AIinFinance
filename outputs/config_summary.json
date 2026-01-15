@@ -29,7 +29,7 @@
   },
   "XGB_NUM_BOOST_ROUND": 5000,
   "XGB_EARLY_STOPPING": 200,
-  "COST_FN": 50.0,
+  "COST_FN": 25.0,
   "COST_FP": 1.0,
   "CAPACITY_PCT": 0.2,
   "OUTPUT_DIR": "outputs",
