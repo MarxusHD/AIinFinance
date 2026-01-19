@@ -15,23 +15,40 @@
     10.0
   ],
   "XGB_PARAMS": {
-    "max_depth": 5,
-    "min_child_weight": 5,
-    "subsample": 0.8,
-    "colsample_bytree": 0.8,
-    "eta": 0.1,
-    "reg_lambda": 10.0,
-    "reg_alpha": 0.0,
     "objective": "binary:logistic",
-    "eval_metric": "aucpr",
+    "eval_metric": [
+      "aucpr",
+      "auc"
+    ],
     "tree_method": "hist",
     "seed": 42
   },
-  "XGB_NUM_BOOST_ROUND": 5000,
+  "XGB_N_TRIALS": 100,
+  "XGB_NUM_BOOST_ROUND": 30000,
   "XGB_EARLY_STOPPING": 200,
   "COST_FN": 25.0,
   "COST_FP": 1.0,
   "CAPACITY_PCT": 0.2,
   "OUTPUT_DIR": "outputs",
-  "FIG_DIR": "figures"
+  "FIG_DIR": "figures",
+  "XGB_BEST_PARAMS": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "aucpr",
+      "auc"
+    ],
+    "tree_method": "hist",
+    "seed": 42,
+    "scale_pos_weight": 29.532131661442005,
+    "max_depth": 5,
+    "min_child_weight": 100.0,
+    "gamma": 0.5,
+    "eta": 0.049999999999999996,
+    "reg_lambda": 11.215390859631707,
+    "reg_alpha": 0.0,
+    "subsample": 0.6756991415359352,
+    "colsample_bytree": 0.7010777123578029,
+    "max_delta_step": 5,
+    "booster": "gbtree"
+  }
 }
