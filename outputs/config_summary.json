@@ -23,10 +23,65 @@
     "tree_method": "hist",
     "seed": 42
   },
+  "XGB_PARAM_SPACE": {
+    "max_depth": [
+      3,
+      4,
+      5
+    ],
+    "min_child_weight": [
+      10,
+      30,
+      60,
+      100
+    ],
+    "gamma": [
+      0.5,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "eta": [
+      0.01,
+      0.03,
+      0.05
+    ],
+    "reg_lambda": [
+      1.0,
+      10.0,
+      30.0,
+      50.0
+    ],
+    "reg_alpha": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "subsample": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "colsample_bytree": [
+      0.3,
+      0.5,
+      0.8
+    ],
+    "max_delta_step": [
+      1,
+      3,
+      5
+    ],
+    "booster": [
+      "gbtree",
+      "dart"
+    ]
+  },
   "XGB_N_TRIALS": 100,
   "XGB_NUM_BOOST_ROUND": 30000,
   "XGB_EARLY_STOPPING": 200,
-  "COST_FN": 25.0,
+  "COST_FN": 10.0,
   "COST_FP": 1.0,
   "CAPACITY_PCT": 0.2,
   "OUTPUT_DIR": "outputs",
@@ -40,15 +95,15 @@
     "tree_method": "hist",
     "seed": 42,
     "scale_pos_weight": 29.532131661442005,
-    "max_depth": 5,
-    "min_child_weight": 100.0,
-    "gamma": 0.5,
+    "max_depth": 4,
+    "min_child_weight": 17.0,
+    "gamma": 5.574619478135045,
     "eta": 0.049999999999999996,
-    "reg_lambda": 11.215390859631707,
-    "reg_alpha": 0.0,
-    "subsample": 0.6756991415359352,
-    "colsample_bytree": 0.7010777123578029,
-    "max_delta_step": 5,
+    "reg_lambda": 13.225357951556036,
+    "reg_alpha": 0.32429879002789586,
+    "subsample": 0.6810677597956699,
+    "colsample_bytree": 0.34946775732815727,
+    "max_delta_step": 1,
     "booster": "gbtree"
   }
 }
