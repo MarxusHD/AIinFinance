@@ -1,0 +1,109 @@
+{
+  "DATA_PATH": "data.csv",
+  "VARIABLES_XLSX_PATH": "Variables.xlsx",
+  "TRAIN_CUTOFF_LABEL_YEAR": 2022,
+  "VAL_YEARS": 1,
+  "KNN_K": 5,
+  "IMPUTE_LO_Q": 0.01,
+  "IMPUTE_HI_Q": 0.99,
+  "WINSOR_LO_Q": 0.01,
+  "WINSOR_HI_Q": 0.99,
+  "LOGIT_C_GRID": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "XGB_PARAMS": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "aucpr",
+      "auc"
+    ],
+    "tree_method": "hist",
+    "seed": 42
+  },
+  "XGB_PARAM_SPACE": {
+    "max_depth": [
+      3,
+      4,
+      5
+    ],
+    "min_child_weight": [
+      10,
+      30,
+      60,
+      100
+    ],
+    "gamma": [
+      0.5,
+      2.0,
+      5.0,
+      10.0
+    ],
+    "eta": [
+      0.01,
+      0.03,
+      0.05
+    ],
+    "reg_lambda": [
+      1.0,
+      10.0,
+      30.0,
+      50.0
+    ],
+    "reg_alpha": [
+      0.0,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "subsample": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "colsample_bytree": [
+      0.3,
+      0.5,
+      0.8
+    ],
+    "max_delta_step": [
+      1,
+      3,
+      5
+    ],
+    "booster": [
+      "gbtree",
+      "dart"
+    ]
+  },
+  "XGB_N_TRIALS": 100,
+  "XGB_NUM_BOOST_ROUND": 30000,
+  "XGB_EARLY_STOPPING": 200,
+  "COST_FN": 10.0,
+  "COST_FP": 1.0,
+  "CAPACITY_PCT": 0.3,
+  "OUTPUT_DIR": "outputs_v1",
+  "FIG_DIR": "figures_v1",
+  "XGB_BEST_PARAMS": {
+    "objective": "binary:logistic",
+    "eval_metric": [
+      "aucpr",
+      "auc"
+    ],
+    "tree_method": "hist",
+    "seed": 42,
+    "scale_pos_weight": 11.50455298013245,
+    "max_depth": 4,
+    "min_child_weight": 71.0,
+    "gamma": 0.525702410082752,
+    "eta": 0.04939501549762264,
+    "reg_lambda": 34.684950179576006,
+    "reg_alpha": 0.5600027372102777,
+    "subsample": 0.5804030032399958,
+    "colsample_bytree": 0.4530805087213321,
+    "max_delta_step": 1,
+    "booster": "gbtree"
+  }
+}

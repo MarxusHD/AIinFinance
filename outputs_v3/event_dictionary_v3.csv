@@ -1,0 +1,8 @@
+event,definition,inputs,calibration,parameter
+evt_divcut,"Dividend YoY % change <= training P10 threshold (bounded [-0.50,-0.10])",dvc,train-only,"{""DIV_CUT_THR_P10_BOUNDED"": -0.5}"
+evt_divsusp,Dividend >0 at t-1 and ~0 at t,dvc,none,
+evt_divinit,Dividend ~0 at t-1 and >0 at t,dvc,none,
+evt_liq_squeeze,Current ratio < 1.0,"act,lct",fixed threshold,
+evt_quick_squeeze,Quick ratio < 0.8,"act,lct,invt (or che+rect)",fixed threshold,
+evt_ebitdadrop,EBITDA <=0 OR EBITDA/EBITDA_{t-1}<0.5 (requires EBITDA_{t-1}>0),oibdp,fixed threshold,
+evt_cfdrop,CFO <=0 OR CFO/CFO_{t-1}<0.5 (requires CFO_{t-1}>0),oancf,fixed threshold,
