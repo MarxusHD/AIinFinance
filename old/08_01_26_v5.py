@@ -1573,6 +1573,27 @@ df_model["pd_tree"] = iso.transform(p_all_raw)
 
 print("Calibration fitted on validation only.")
 display(df_model[["split","pd_tree"]].groupby("split").mean())
+
+# Diagnostic: share of TEST raw scores outside calibration support and boundary-mapped probs
+cal_support_lo = float(np.min(p_val_raw))
+cal_support_hi = float(np.max(p_val_raw))
+test_mask = df_model["split"] == "test"
+p_test_raw = p_all_raw[test_mask.values]
+p_test_cal = df_model.loc[test_mask, "pd_tree"].values
+
+outside_support = (p_test_raw < cal_support_lo) | (p_test_raw > cal_support_hi)
+outside_support_share = float(np.mean(outside_support)) if p_test_raw.size else 0.0
+
+cal_prob_lo = float(iso.transform([cal_support_lo])[0])
+cal_prob_hi = float(iso.transform([cal_support_hi])[0])
+boundary_mapped = np.isclose(p_test_cal, cal_prob_lo) | np.isclose(p_test_cal, cal_prob_hi)
+boundary_mapped_share = float(np.mean(boundary_mapped)) if p_test_cal.size else 0.0
+
+print(
+    "TEST calibration support diagnostic: "
+    f"outside_support_share={outside_support_share:.3%}, "
+    f"boundary_mapped_prob_share={boundary_mapped_share:.3%}"
+)
 # %% [markdown]
 # #### 7B.3 Feature importance and SHAP (optional explainability)
 # %%
