@@ -9,10 +9,10 @@
   "WINSOR_LO_Q": 0.01,
   "WINSOR_HI_Q": 0.99,
   "LOGIT_C_GRID": [
-    0.01,
-    0.1,
-    1.0,
-    10.0
+    0.001,
+    0.005,
+    0.0075,
+    0.015
   ],
   "XGB_PARAMS": {
     "objective": "binary:logistic",
@@ -23,87 +23,29 @@
     "tree_method": "hist",
     "seed": 42
   },
-  "XGB_PARAM_SPACE": {
-    "max_depth": [
-      3,
-      4,
-      5
-    ],
-    "min_child_weight": [
-      10,
-      30,
-      60,
-      100
-    ],
-    "gamma": [
-      0.5,
-      2.0,
-      5.0,
-      10.0
-    ],
-    "eta": [
-      0.01,
-      0.03,
-      0.05
-    ],
-    "reg_lambda": [
-      1.0,
-      10.0,
-      30.0,
-      50.0
-    ],
-    "reg_alpha": [
-      0.0,
-      0.5,
-      1.0,
-      2.0
-    ],
-    "subsample": [
-      0.5,
-      0.7,
-      0.9
-    ],
-    "colsample_bytree": [
-      0.3,
-      0.5,
-      0.8
-    ],
-    "max_delta_step": [
-      1,
-      3,
-      5
-    ],
-    "booster": [
-      "gbtree",
-      "dart"
-    ]
-  },
   "XGB_N_TRIALS": 100,
   "XGB_NUM_BOOST_ROUND": 30000,
   "XGB_EARLY_STOPPING": 200,
-  "COST_FN": 10.0,
+  "COST_FN": 3.0,
   "COST_FP": 1.0,
   "CAPACITY_PCT": 0.2,
   "OUTPUT_DIR": "outputs",
   "FIG_DIR": "figures",
   "XGB_BEST_PARAMS": {
     "objective": "binary:logistic",
-    "eval_metric": [
-      "aucpr",
-      "auc"
-    ],
+    "eval_metric": "logloss",
     "tree_method": "hist",
     "seed": 42,
-    "scale_pos_weight": 29.532131661442005,
+    "scale_pos_weight": 1.0,
     "max_depth": 4,
-    "min_child_weight": 17.0,
-    "gamma": 5.574619478135045,
-    "eta": 0.049999999999999996,
-    "reg_lambda": 13.225357951556036,
-    "reg_alpha": 0.32429879002789586,
-    "subsample": 0.6810677597956699,
-    "colsample_bytree": 0.34946775732815727,
-    "max_delta_step": 1,
+    "min_child_weight": 18.0,
+    "gamma": 0.9036070114609736,
+    "eta": 0.0423297360787806,
+    "reg_lambda": 2.750377740763419,
+    "reg_alpha": 1.9206584143864607,
+    "subsample": 0.7641706950040412,
+    "colsample_bytree": 0.6297713603635094,
+    "max_delta_step": 5,
     "booster": "gbtree"
   }
 }
