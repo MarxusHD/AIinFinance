@@ -16,10 +16,6 @@
   ],
   "XGB_PARAMS": {
     "objective": "binary:logistic",
-    "eval_metric": [
-      "aucpr",
-      "auc"
-    ],
     "tree_method": "hist",
     "seed": 42
   },
@@ -33,7 +29,6 @@
   "FIG_DIR": "figures",
   "XGB_BEST_PARAMS": {
     "objective": "binary:logistic",
-    "eval_metric": "logloss",
     "tree_method": "hist",
     "seed": 42,
     "scale_pos_weight": 1.0,
@@ -46,6 +41,7 @@
     "subsample": 0.7641706950040412,
     "colsample_bytree": 0.6297713603635094,
     "max_delta_step": 5,
-    "booster": "gbtree"
+    "booster": "gbtree",
+    "eval_metric": "logloss"
   }
 }
