@@ -24,24 +24,7 @@
   "XGB_EARLY_STOPPING": 200,
   "COST_FN": 3.0,
   "COST_FP": 1.0,
-  "CAPACITY_PCT": 0.2,
+  "CAPACITY_PCT": 0.05,
   "OUTPUT_DIR": "outputs",
-  "FIG_DIR": "figures",
-  "XGB_BEST_PARAMS": {
-    "objective": "binary:logistic",
-    "tree_method": "hist",
-    "seed": 42,
-    "scale_pos_weight": 1.0,
-    "max_depth": 4,
-    "min_child_weight": 18.0,
-    "gamma": 0.9036070114609736,
-    "eta": 0.0423297360787806,
-    "reg_lambda": 2.750377740763419,
-    "reg_alpha": 1.9206584143864607,
-    "subsample": 0.7641706950040412,
-    "colsample_bytree": 0.6297713603635094,
-    "max_delta_step": 5,
-    "booster": "gbtree",
-    "eval_metric": "logloss"
-  }
+  "FIG_DIR": "figures"
 }
